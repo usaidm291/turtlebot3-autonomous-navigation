@@ -72,3 +72,35 @@ through RViz2.
 The project uses the installed TurtleBot3 world and navigation map.
 It does not currently include a custom-built map or a custom Nav2
 planner.
+
+## Included Configuration and Map
+
+- `config/burger.yaml`: TurtleBot3 Burger Nav2 parameters copied from
+  the installed ROS 2 Humble TurtleBot3 navigation package.
+- `maps/map.yaml` and `maps/map.pgm`: The map used for the simulation.
+- `results/demo.mp4`: Autonomous navigation demonstration.
+
+## Run Using the Repository Files
+
+Clone the repository and enter its directory:
+
+    git clone https://github.com/usaidm291/turtlebot3-autonomous-navigation.git
+    cd turtlebot3-autonomous-navigation
+
+Start Gazebo in one terminal:
+
+    source /opt/ros/humble/setup.bash
+    export TURTLEBOT3_MODEL=burger
+    ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+
+Start Nav2 in a second terminal from the project directory:
+
+    source /opt/ros/humble/setup.bash
+    export TURTLEBOT3_MODEL=burger
+    ros2 launch turtlebot3_navigation2 navigation2.launch.py map:=$(pwd)/maps/map.yaml params_file:=$(pwd)/config/burger.yaml use_sim_time:=True
+
+Wait for navigation to initialize. In RViz2, use Nav2 Goal to select
+a destination and observe autonomous movement.
+
+Note: ROS 2 Humble, TurtleBot3 packages, Gazebo Classic, and RViz2
+must be installed before running the project.
