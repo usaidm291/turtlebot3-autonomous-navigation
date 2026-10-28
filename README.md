@@ -46,3 +46,29 @@ simulation while its movement was visualized in RViz2.
 
 ## Author
 TurtleBot3 Autonomous Navigation Project
+
+## Demo Video
+
+The autonomous navigation demonstration is available at:
+`results/demo.mp4`
+
+The recording shows the TurtleBot3 navigating to a goal selected in
+RViz2 while its movement is simulated in Gazebo.
+
+## Challenges and Learnings
+
+- Setting up the ROS 2 Humble simulation and Nav2 navigation stack.
+- Understanding the relationship between Gazebo, RViz2, TF frames,
+  odometry, laser scans, and AMCL localization.
+- Sending navigation goals through RViz2 and observing autonomous
+  path planning and movement.
+
+## Reproducing the Demonstration
+
+Use the launch commands above in separate terminals. Wait for the
+simulation and navigation stack to initialize before sending a goal
+through RViz2.
+
+The project uses the installed TurtleBot3 world and navigation map.
+It does not currently include a custom-built map or a custom Nav2
+planner.
