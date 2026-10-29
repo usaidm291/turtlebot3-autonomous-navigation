@@ -45,7 +45,7 @@ The robot successfully travelled to a selected Nav2 goal in the Gazebo
 simulation while its movement was visualized in RViz2.
 
 ## Author
-TurtleBot3 Autonomous Navigation Project
+Usaid Ahmed Mansabdar
 
 ## Demo Video
 
